@@ -8,10 +8,68 @@
     <title>Motion</title>
     <script src="./build/main.js"></script>
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
 </head>
 
 <body>
-    Motion
+    <div class="section">
+        <header class="header">
+            <h1 class="header-title">MOTION</h1>
+            <nav class="header-btns">
+                <button class="headr-btns-image">image</button>
+                <button class="headr-btns-video">video</button>
+                <button class="headr-btns-note">note</button>
+                <button class="headr-btns-task">task</button>
+            </nav>
+        </header>
+        <main class="main">
+            <section class="main-item">
+                <div class="main-item-media">
+                    <img src="https://picsum.photos/200/300" class="main-item-media__image" alt="random_image">
+                </div>
+                <h3 class="main-item-title">title</h3>
+                <button class="main-item-delBtn">x</button>
+            </section>
+            <!-- <section class="main-item">
+                <div class="main-item-media">
+                    <iframe id="ytplayer" type="text/html" width="720" height="405" class="main-item-media__video"
+                        src="https://www.youtube.com/embed/M7lc1UVf-VE" frameborder="0" allowfullscreen>
+                </div>
+                <h3 class="main-item-title">title</h3>
+                <button class="main-item-delBtn">x</button>
+            </section> -->
+            <section class="main-item">
+                <h1 class="main-item-title">Todo</h1>
+                <h3 class="main-item-content">todo</h3>
+                <button class="main-item-delBtn">x</button>
+            </section>
+            <section class="main-item">
+                <h1 class="main-item-title">Note</h1>
+                <h3 class="main-item-content">note content</h3>
+                <button class="main-item-delBtn">x</button>
+            </section>
+            <!-- <form class="media-form">
+                <button class="closeBtn">x</button>
+                <label for="media-form-title">Title</label>
+                <input type="text" class="media-form-title">
+                <label for="media-form-content">URL</label>
+                <input type="text" class="media-form-content">
+                <input type="submit" value="ADD">
+            </form>
+            <form class="text-form">
+                <button class="closeBtn">x</button>
+                <label for="media-form-title">Title</label>
+                <input type="text" class="media-form-title">
+                <label for="media-form-content">URL</label>
+                <input type="text" class="media-form-content">
+                <input type="submit" value="ADD">
+            </form> -->
+        </main>
+
+        <footer class="footer">
+            <span class="footer-content">@Copyright by cktjdgus45@naver.com All rights reserved</span>
+        </footer>
+    </div>
 </body>
 
 </html>
