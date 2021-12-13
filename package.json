@@ -1,0 +1,19 @@
+{
+  "name": "motion2",
+  "version": "1.0.0",
+  "description": "make motion with typescript",
+  "main": "main.js",
+  "scripts": {
+    "start": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cktjdgus45/Motion2.git"
+  },
+  "author": "cktjdgus45",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cktjdgus45/Motion2/issues"
+  },
+  "homepage": "https://github.com/cktjdgus45/Motion2#readme"
+}
