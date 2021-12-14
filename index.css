@@ -38,8 +38,7 @@ body{
 /* main */
 .main{
     height: 70%;
-    background-color: #494749;
-    opacity: 0.3;
+    background-color: rgba(73,71,73,0.3);
     position: relative;
 }
 

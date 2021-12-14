@@ -1,11 +1,12 @@
-"use strict";
+import ImageComponent from './image.js';
+import PageComponent from './page.js';
 const headerBtns = document.querySelector('.header-btns');
 const mediaForm = document.querySelector('.media-form');
 const textForm = document.querySelector('.text-form');
+const page = new PageComponent();
 const handleClick = (event) => {
     const target = event.target;
     const text = target.innerText;
-    console.log(text);
     text === "image" || text === "video" ? mediaForm === null || mediaForm === void 0 ? void 0 : mediaForm.classList.toggle('hide') :
         console.log('');
     text === "note" || text === "task" ? textForm === null || textForm === void 0 ? void 0 : textForm.classList.toggle('hide') :
@@ -13,12 +14,15 @@ const handleClick = (event) => {
 };
 const handleMediaSubmit = (event) => {
     event.preventDefault();
-    const title = mediaForm === null || mediaForm === void 0 ? void 0 : mediaForm.querySelector('.media-form-title');
-    const url = mediaForm === null || mediaForm === void 0 ? void 0 : mediaForm.querySelector('.media-form-url');
-    console.dir(title.value);
-    console.dir(url.value);
-    title.value = "";
-    url.value = "";
+    const titleElement = mediaForm === null || mediaForm === void 0 ? void 0 : mediaForm.querySelector('.media-form-title');
+    const urlElement = mediaForm === null || mediaForm === void 0 ? void 0 : mediaForm.querySelector('.media-form-url');
+    const title = titleElement.value;
+    const url = urlElement.value;
+    const img = new ImageComponent(title, url);
+    console.log(img.makeImageElement());
+    page.attatchTo(img.makeImageElement());
+    titleElement.value = "";
+    urlElement.value = "";
     mediaForm === null || mediaForm === void 0 ? void 0 : mediaForm.classList.add('hide');
 };
 const handleTextSubmit = (event) => {
