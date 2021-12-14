@@ -1,6 +1,6 @@
 export default class VideoComponent {
     constructor(private title: string, private url: string) { };
-    makeVideoElement(): HTMLIFrameElement {
+    makeVideoElement(): string {
         const iframe = document.createElement('iframe');
         iframe.src = this.url;
         iframe.id = "ytplayer";
@@ -8,6 +8,6 @@ export default class VideoComponent {
         iframe.width = "720";
         iframe.height = "405";
         iframe.allowFullscreen = true;
-        return iframe;
+        return iframe.outerHTML;
     }
 }

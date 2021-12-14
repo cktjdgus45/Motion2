@@ -12,6 +12,6 @@ export default class VideoComponent {
         iframe.width = "720";
         iframe.height = "405";
         iframe.allowFullscreen = true;
-        return iframe;
+        return iframe.outerHTML;
     }
 }

@@ -11,6 +11,6 @@ export default class NoteComponent {
         content.className = "main-item-content";
         title.innerText = this.title;
         content.innerText = this.body;
-        return content;
+        return content.outerHTML;
     }
 }
