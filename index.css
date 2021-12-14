@@ -40,6 +40,7 @@ body{
     height: 70%;
     background-color: #494749;
     opacity: 0.3;
+    position: relative;
 }
 
 /* footer */
@@ -49,4 +50,58 @@ body{
     color: white;
     text-align: center;
     padding-top: 35px;
+}
+
+/* popup */
+form{
+    position: absolute;
+    top: 40%;
+    left: 42%;
+    padding: 30px;
+    color: #161516;
+    background-color: #494749;
+    width: 400px;
+    height: 130px;
+    opacity: 1;
+}
+form label{
+    color: #E2D0A6;
+    font-size: 12px;
+}
+
+form button,form input[type="submit"]{
+    border: none;
+}
+form input[type="submit"]{
+    border-radius: 1px;
+    background-color: red;
+    color: #fff;
+    display: block;
+    margin-left: auto;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+
+form input[type="text"]{
+    width: 100%;
+    border:1px solid #3f3f3f;
+    background-color: #68686850;
+    outline: none;
+    color: #fff;
+}
+
+form .closeBtn{
+    display: block;
+    margin-left: auto;
+    color: red;
+    font-weight: bold;
+    background-color: inherit;
+}
+
+.hide{
+    display: none;
+}
+.show{
+    display: block;
 }
