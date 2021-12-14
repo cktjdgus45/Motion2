@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Motion</title>
-    <script src="./build/main.js"></script>
+    <script defer src="./build/main.js"></script>
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./reset.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
@@ -17,10 +17,10 @@
         <header class="header">
             <h1 class="header-title">MOTION</h1>
             <nav class="header-btns">
-                <button class="headr-btns-image">image</button>
-                <button class="headr-btns-video">video</button>
-                <button class="headr-btns-note">note</button>
-                <button class="headr-btns-task">task</button>
+                <button class="header-btns-image">image</button>
+                <button class="header-btns-video">video</button>
+                <button class="header-btns-note">note</button>
+                <button class="header-btns-task">task</button>
             </nav>
         </header>
         <main class="main">
@@ -50,7 +50,7 @@
                 <button class="main-item-delBtn">x</button>
             </section> -->
         </main>
-        <form class="media-form show">
+        <form class="media-form hide">
             <button class="closeBtn">x</button>
             <label for="media-form-title">Title</label>
             <div>
@@ -68,7 +68,7 @@
             <div>
                 <input type="text" class="media-form-title">
             </div>
-            <label for="media-form-content">URL</label>
+            <label for="media-form-content">Body</label>
             <div>
                 <input type="text" class="media-form-content">
             </div>
