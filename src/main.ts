@@ -6,7 +6,10 @@ import VideoComponent from './video.js';
 
 const headerBtns = document.querySelector('.header-btns');
 const mediaForm = document.querySelector('.media-form');
+const mediaAdd = mediaForm?.querySelector('input[type="submit"]')
 const textForm = document.querySelector('.text-form');
+const textAdd = textForm?.querySelector('input[type="submit"]')
+const closeBtn = document?.querySelectorAll('.closeBtn');
 
 const page = new PageComponent();
 
@@ -81,6 +84,13 @@ const handleTextSubmit = (event: Event) => {
     textForm?.classList.add('hide');
 }
 
+const handleClose = (event: Event) => {
+    event.preventDefault();
+    mediaForm?.classList.add('hide');
+    textForm?.classList.add('hide');
+}
+
 headerBtns?.addEventListener('click', handleClick);
-mediaForm?.addEventListener('submit', handleMediaSubmit);
-textForm?.addEventListener('submit', handleTextSubmit);
+mediaAdd?.addEventListener('click', handleMediaSubmit);
+textAdd?.addEventListener('click', handleTextSubmit);
+closeBtn?.forEach(btn => btn.addEventListener('click', handleClose));

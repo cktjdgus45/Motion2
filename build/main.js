@@ -5,7 +5,10 @@ import TaskComponent from './task.js';
 import VideoComponent from './video.js';
 const headerBtns = document.querySelector('.header-btns');
 const mediaForm = document.querySelector('.media-form');
+const mediaAdd = mediaForm === null || mediaForm === void 0 ? void 0 : mediaForm.querySelector('input[type="submit"]');
 const textForm = document.querySelector('.text-form');
+const textAdd = textForm === null || textForm === void 0 ? void 0 : textForm.querySelector('input[type="submit"]');
+const closeBtn = document === null || document === void 0 ? void 0 : document.querySelectorAll('.closeBtn');
 const page = new PageComponent();
 const handleClick = (event) => {
     const target = event.target;
@@ -75,6 +78,12 @@ const handleTextSubmit = (event) => {
     urlElement.value = "";
     textForm === null || textForm === void 0 ? void 0 : textForm.classList.add('hide');
 };
+const handleClose = (event) => {
+    event.preventDefault();
+    mediaForm === null || mediaForm === void 0 ? void 0 : mediaForm.classList.add('hide');
+    textForm === null || textForm === void 0 ? void 0 : textForm.classList.add('hide');
+};
 headerBtns === null || headerBtns === void 0 ? void 0 : headerBtns.addEventListener('click', handleClick);
-mediaForm === null || mediaForm === void 0 ? void 0 : mediaForm.addEventListener('submit', handleMediaSubmit);
-textForm === null || textForm === void 0 ? void 0 : textForm.addEventListener('submit', handleTextSubmit);
+mediaAdd === null || mediaAdd === void 0 ? void 0 : mediaAdd.addEventListener('click', handleMediaSubmit);
+textAdd === null || textAdd === void 0 ? void 0 : textAdd.addEventListener('click', handleTextSubmit);
+closeBtn === null || closeBtn === void 0 ? void 0 : closeBtn.forEach(btn => btn.addEventListener('click', handleClose));
