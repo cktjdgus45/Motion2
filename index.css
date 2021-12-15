@@ -38,8 +38,10 @@ body{
 /* main */
 .main{
     height: 70%;
+    overflow-y: scroll;
     background-color: rgba(73,71,73,0.3);
     position: relative;
+    padding-top: 30px;
 }
 
 /* footer */

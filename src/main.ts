@@ -47,7 +47,7 @@ const handleClick = (event: Event) => {
 const handleMediaSubmit = (event: Event) => {
     event.preventDefault();
     const kind = event.target as HTMLElement;
-    const item = kind.classList.item(1);
+    const item = kind.parentElement?.classList.item(1);
     const titleElement = mediaForm?.querySelector('.media-form-title') as HTMLInputElement;
     const urlElement = mediaForm?.querySelector('.media-form-url') as HTMLInputElement;
     const title = titleElement.value;
@@ -56,6 +56,7 @@ const handleMediaSubmit = (event: Event) => {
     if (item === "image") {
         const img = new ImageComponent(title, url);
         page.attatchTo(img.makeImageElement());
+        console.log(img.makeImageElement())
     } else if (item === "video") {
         const video = new VideoComponent(title, url);
         page.attatchTo(video.makeVideoElement());
@@ -67,7 +68,7 @@ const handleMediaSubmit = (event: Event) => {
 const handleTextSubmit = (event: Event) => {
     event.preventDefault();
     const kind = event.target as HTMLElement;
-    const item = kind.classList.item(1);
+    const item = kind.parentElement?.classList.item(1);
     const titleElement = textForm?.querySelector('.text-form-title') as HTMLInputElement;
     const urlElement = textForm?.querySelector('.text-form-body') as HTMLInputElement;
     const title = titleElement.value;

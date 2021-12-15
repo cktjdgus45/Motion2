@@ -39,9 +39,10 @@ const handleClick = (event) => {
     }
 };
 const handleMediaSubmit = (event) => {
+    var _a;
     event.preventDefault();
     const kind = event.target;
-    const item = kind.classList.item(1);
+    const item = (_a = kind.parentElement) === null || _a === void 0 ? void 0 : _a.classList.item(1);
     const titleElement = mediaForm === null || mediaForm === void 0 ? void 0 : mediaForm.querySelector('.media-form-title');
     const urlElement = mediaForm === null || mediaForm === void 0 ? void 0 : mediaForm.querySelector('.media-form-url');
     const title = titleElement.value;
@@ -49,6 +50,7 @@ const handleMediaSubmit = (event) => {
     if (item === "image") {
         const img = new ImageComponent(title, url);
         page.attatchTo(img.makeImageElement());
+        console.log(img.makeImageElement());
     }
     else if (item === "video") {
         const video = new VideoComponent(title, url);
@@ -59,9 +61,10 @@ const handleMediaSubmit = (event) => {
     mediaForm === null || mediaForm === void 0 ? void 0 : mediaForm.classList.add('hide');
 };
 const handleTextSubmit = (event) => {
+    var _a;
     event.preventDefault();
     const kind = event.target;
-    const item = kind.classList.item(1);
+    const item = (_a = kind.parentElement) === null || _a === void 0 ? void 0 : _a.classList.item(1);
     const titleElement = textForm === null || textForm === void 0 ? void 0 : textForm.querySelector('.text-form-title');
     const urlElement = textForm === null || textForm === void 0 ? void 0 : textForm.querySelector('.text-form-body');
     const title = titleElement.value;
