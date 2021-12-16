@@ -50,7 +50,6 @@ const handleMediaSubmit = (event) => {
     if (item === "image") {
         const img = new ImageComponent(title, url);
         page.attatchTo(img.makeImageElement());
-        console.log(img.makeImageElement());
     }
     else if (item === "video") {
         const video = new VideoComponent(title, url);

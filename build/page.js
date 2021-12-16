@@ -1,8 +1,13 @@
 export default class PageComponent {
-    constructor() { }
+    constructor() {
+        this.main = document.querySelector('.main');
+    }
     ;
     attatchTo(element) {
-        const main = document.querySelector('.main');
-        main === null || main === void 0 ? void 0 : main.insertAdjacentHTML('afterbegin', element);
+        var _a;
+        (_a = this.main) === null || _a === void 0 ? void 0 : _a.insertAdjacentElement('afterbegin', element);
+    }
+    deleteComponent(element) {
+        element.remove();
     }
 }

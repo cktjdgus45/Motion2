@@ -1,3 +1,4 @@
+import PageComponent from './page.js';
 export default class ImageComponent {
     constructor(title, url) {
         this.title = title;
@@ -19,10 +20,13 @@ export default class ImageComponent {
         const button = document.createElement('button');
         button.className = "main-item-delBtn";
         button.innerText = 'x';
+        button.addEventListener('click', (event) => {
+            new PageComponent().deleteComponent(section);
+        });
         div.appendChild(h3);
         div.appendChild(button);
         section.appendChild(img);
         section.appendChild(div);
-        return section.outerHTML;
+        return section;
     }
 }

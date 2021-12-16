@@ -1,3 +1,4 @@
+import PageComponent from './page.js';
 export default class NoteComponent {
     constructor(title, body) {
         this.title = title;
@@ -18,10 +19,13 @@ export default class NoteComponent {
         const button = document.createElement('button');
         button.className = "main-item-delBtn";
         button.innerText = 'x';
+        button.addEventListener('click', (event) => {
+            new PageComponent().deleteComponent(section);
+        });
         div.appendChild(title);
         div.appendChild(content);
         section.appendChild(div);
         section.appendChild(button);
-        return section.outerHTML;
+        return section;
     }
 }

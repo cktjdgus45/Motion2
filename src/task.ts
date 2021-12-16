@@ -1,6 +1,8 @@
+import PageComponent from './page.js';
+
 export default class TaskComponent {
     constructor(private title: string, private body: string) { };
-    makeTaskElement(): string {
+    makeTaskElement(): Element {
         const section = document.createElement('section');
         section.className = "main-item";
         const div = document.createElement('div');
@@ -14,10 +16,13 @@ export default class TaskComponent {
         const button = document.createElement('button');
         button.className = "main-item-delBtn";
         button.innerText = 'x';
+        button.addEventListener('click', (event: Event) => {
+            new PageComponent().deleteComponent(section)
+        })
         div.appendChild(title);
         div.appendChild(content);
         section.appendChild(div);
         section.appendChild(button);
-        return section.outerHTML;
+        return section;
     }
 }
